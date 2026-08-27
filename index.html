@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/badge.css">
 </head>
 
 <body>
@@ -27,6 +28,8 @@
   <img src="images/pretty-json.png" alt="The same response laid out on separate lines by the browser's JSON viewer">
 
   <p>What I did: I sent a request to the Dog CEO API. What I saw: the API returned a dog image address and a success status.</p>
+
+  <p>Status: <span class="badge">200</span></p>
 
   <pre><code>{
   "message": "https://images.dog.ceo/breeds/maltese/n02085936_4262.jpg",
@@ -56,6 +59,8 @@
   <p>What I did: I requested three random hound images from the dog.ceo API.</p> 
   <p>What I saw: the response returned a list of three image URLs inside the JSON object.</p>
 
+  <p>Status: <span class="badge">200</span></p>
+
   <pre><code>{
   "message": [
     "https://images.dog.ceo/breeds/hound-blood/n02088466_10724.jpg",
@@ -71,6 +76,9 @@
   <img src="images/postman-coffee-menu.png" alt="Postman showing the coffee shop menu request with a 200 status and response body">
   
   <p>What I did: I sent a GET request to the coffee shop menu API. What I saw: the response returned ten drinks with their names, prices, and recipes.</p>
+  
+  <p>Status: <span class="badge">200</span></p>
+  
   <pre><code>
   [
     {
@@ -264,6 +272,10 @@
   <img src="images/postman-keyed-request.png" alt="Postman showing a 200 OK response after adding the API key">
 
   <p>What I learned: some APIs require an API key before they will return data. The key goes in the <code>X-Api-Key</code> header instead of being added to the URL.</p>
+
+  <p>Status: <span class="badge">400</span> - missing key</p>
+  <p>Status: <span class="badge">200</span> - with API key</p>
+
 </section>
 
   </main>
