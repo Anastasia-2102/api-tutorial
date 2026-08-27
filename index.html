@@ -246,6 +246,26 @@
 </code></pre>
 </section>
 
+<section class="card">
+  <h2>One request, different answers</h2>
+
+  <img src="images/cat-limit-1.png" alt="Postman showing the Cat API request with limit 1 and a 200 response">
+
+  <img src="images/cat-limit-10.png" alt="Postman showing the Cat API request with limit 10 and a 200 response">
+
+  <p>What I learned: I can use the <code>limit</code> query parameter to control how many cat records the API returns. Changing the value from <code>1</code> to <code>10</code> changed the number of records in the response.</p>
+</section>
+
+<section class="card">
+  <h2>When the API asks for a key</h2>
+
+  <img src="images/missing-api-key.png" alt="Postman showing a 400 Bad Request because the API key is missing">
+
+  <img src="images/postman-keyed-request.png" alt="Postman showing a 200 OK response after adding the API key">
+
+  <p>What I learned: some APIs require an API key before they will return data. The key goes in the <code>X-Api-Key</code> header instead of being added to the URL.</p>
+</section>
+
   </main>
 </body>
 </html>
