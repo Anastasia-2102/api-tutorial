@@ -8,3 +8,9 @@ function showPet(pet) {
   button.addEventListener("click", function () {
   showPet(pets[0]);
 });
+
+let secondButton = document.getElementById("describe-second-button");
+
+secondButton.addEventListener("click", function () {
+  showPet(pets[1]);
+});
