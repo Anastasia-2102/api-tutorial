@@ -9,3 +9,20 @@ let cards = pets.map(function (pet) {
 });
 
 cardList.innerHTML = cards.join("");
+
+let freshButton = document.getElementById("fresh-button");
+let fresh = document.getElementById("fresh");
+
+function pictureLine(cat) {
+  return cat.width + " by " + cat.height + " — " + cat.url;
+}
+
+freshButton.addEventListener("click", function () {
+  fetch("https://api.thecatapi.com/v1/images/search?limit=10")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (cats) {
+      fresh.textContent = cats.map(pictureLine).join("\n");
+    });
+});
