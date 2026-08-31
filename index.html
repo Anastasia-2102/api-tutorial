@@ -346,6 +346,37 @@
 
 <p> I learned that a function can show <code>undefined</code> when it does not return a value. When I used <code>console.log</code> instead of <code>return</code>, the function did not send the string back to the code that called it. </p> </section>
 
+<section class="card">
+  <h2>How map Builds a New Report</h2>
+
+  <p>
+    Today I learned that <code>map</code> runs a callback for every record and
+    collects the returned values into a new array. I used it to turn each cat
+    into a sentence and then joined the sentences together to build the report.
+  </p>
+
+  <pre><code>let lines = pets.map(summarize);
+let report = lines.join("\n");</code></pre>
+</section>
+
+<section class="card">
+  <h2>Getting Fresh Cats from the API</h2>
+
+  <p>
+    Today I learned how to use <code>fetch</code> to get live data from an API.
+    The response arrives later, so I used a callback with <code>.then()</code>
+    to read the JSON and display a new list of ten cats each time I clicked the button.
+  </p>
+
+  <pre><code>fetch("https://api.thecatapi.com/v1/images/search?limit=10")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (cats) {
+    fresh.textContent = cats.map(pictureLine).join("\n");
+  });</code></pre>
+</section>
+
   </main>
 </body>
 </html>
