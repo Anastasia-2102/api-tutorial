@@ -1,3 +1,5 @@
+let count = 0;
+
 let button = document.getElementById("summarize-button");
 let output = document.getElementById("output");
 
@@ -6,5 +8,8 @@ function summarize(pet) {
 }
 
 button.addEventListener("click", function () {
-  output.textContent = summarize(pets[1]);
+  if (count < pets.length) {
+    output.textContent = summarize(pets[count]);
+    count = count + 1;
+  }
 });
