@@ -1,11 +1,11 @@
-let button = document.getElementById("report-button");
-let report = document.getElementById("report");
+let cardList = document.getElementById("card-list");
 
 function summarize(pet) {
   return pet.name + " comes from " + pet.origin + " and weighs up to " + pet.max_weight + " pounds.";
 }
 
-button.addEventListener("click", function () {
-  let lines = pets.map(summarize);
-  report.textContent = lines.join("\n");
+let cards = pets.map(function (pet) {
+  return '<article class="card"><h3>' + pet.name + '</h3><p>' + summarize(pet) + '</p></article>';
 });
+
+cardList.innerHTML = cards.join("");
