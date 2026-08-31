@@ -20,3 +20,17 @@ console.log(totalWeight);
 
 console.log(report);
 
+console.log(pets[1].ratings.playfulness);
+
+console.log(pets[1].ratings);
+
+let playful = pets.filter(function (pet) {
+  return pet.playfulness > 3;
+});
+
+let playfulLines = playful.map(summarize);
+
+console.log(playfulLines.join("\n"));
+
+console.log(pets.length);
+
